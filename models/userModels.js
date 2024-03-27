@@ -1,4 +1,4 @@
-const db = require('./database/db');
+const db = require('../database/db');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
@@ -49,5 +49,5 @@ UserSchema.methods.comparePasword = async function(password){
     }
 }
 
-const UserModel = db.moddel('User', UserSchema);
+const UserModel = db.model('User', UserSchema);
 module.exports = UserModel;
